@@ -1,7 +1,3 @@
-"""
-Desc:
-Function that computes sum of the digits of a three-digit integer 
-"""
 import math
 
 

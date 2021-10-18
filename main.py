@@ -2,6 +2,7 @@ import sum_of_digits
 import calculate_function
 import sum_of_fractions
 import array_processor
+import triangle
 
 print("==First task==")
 print("Enter three-digit number:")
@@ -9,19 +10,19 @@ num = int(input())
 
 print(sum_of_digits.calculate_three_digit(num))
 
-print("==Second task==")
+print("\n==Second task==")
 print("Enter x and y separating with space:")
 (x, y) = input().split()
 
 print(calculate_function.calculate(float(x), float(y)))
 
-print("==Third task==")
+print("\n==Third task==")
 print("Enter x and number of additions separating with space:")
 (x, n) = input().split()
 
 print(sum_of_fractions.calculate(float(x), int(n)))
 
-print("==Fourth task==\n")
+print("\n==Fourth task==\n")
 array = [[22, 215, 0, -4, 28, 125],
          [87, 44, -22, 7, 123, -39],
          [-9, -5, 0, 63, -17, 45],
@@ -36,3 +37,8 @@ sum = array_processor.process(array)
 print("Sum of squares of positive even elements:", sum, '\n')
 print("Processed array:")
 print('\n'.join(' '.join(str(x) for x in row) for row in array))
+
+print("\n==Fifth task==\n")
+points = triangle.load_point_from_file("DANO.TXT")
+square = triangle.get_square(points)
+print("Square of the triangle:", square)
